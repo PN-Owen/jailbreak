@@ -294,7 +294,9 @@ function JB.Gamemode:PlayerUse( ply, ent )
 	return true
 end
 
-
+function JB.Gamemode:CanPlayerSuicide( ply )
+	return not JB.LastRequestPlayers
+end
 
 JB.Gamemode.ShowHelp = function() end
 JB.Gamemode.ShowTeam = function() end
